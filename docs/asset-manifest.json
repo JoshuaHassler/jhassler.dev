@@ -1,14 +1,14 @@
 {
-  "main.css": "jhassler.dev/static/css/main.59e8fc49.chunk.css",
-  "main.js": "jhassler.dev/static/js/main.16c8f2b6.chunk.js",
-  "main.js.map": "jhassler.dev/static/js/main.16c8f2b6.chunk.js.map",
-  "runtime~main.js": "jhassler.dev/static/js/runtime~main.4e861e51.js",
-  "runtime~main.js.map": "jhassler.dev/static/js/runtime~main.4e861e51.js.map",
-  "static/js/2.5bf9b2cd.chunk.js": "jhassler.dev/static/js/2.5bf9b2cd.chunk.js",
-  "static/js/2.5bf9b2cd.chunk.js.map": "jhassler.dev/static/js/2.5bf9b2cd.chunk.js.map",
-  "index.html": "jhassler.dev/index.html",
-  "precache-manifest.0cce8185ab5ac616482b98c8976f40cb.js": "jhassler.dev/precache-manifest.0cce8185ab5ac616482b98c8976f40cb.js",
-  "service-worker.js": "jhassler.dev/service-worker.js",
-  "static/css/main.59e8fc49.chunk.css.map": "jhassler.dev/static/css/main.59e8fc49.chunk.css.map",
-  "static/media/logo.svg": "jhassler.dev/static/media/logo.5d5d9eef.svg"
+  "main.css": "/static/css/main.59e8fc49.chunk.css",
+  "main.js": "/static/js/main.2b2c9510.chunk.js",
+  "main.js.map": "/static/js/main.2b2c9510.chunk.js.map",
+  "runtime~main.js": "/static/js/runtime~main.fdfcfda2.js",
+  "runtime~main.js.map": "/static/js/runtime~main.fdfcfda2.js.map",
+  "static/js/2.5bf9b2cd.chunk.js": "/static/js/2.5bf9b2cd.chunk.js",
+  "static/js/2.5bf9b2cd.chunk.js.map": "/static/js/2.5bf9b2cd.chunk.js.map",
+  "index.html": "/index.html",
+  "precache-manifest.f0e726e8df52dc1316cfa2eb418c2a7e.js": "/precache-manifest.f0e726e8df52dc1316cfa2eb418c2a7e.js",
+  "service-worker.js": "/service-worker.js",
+  "static/css/main.59e8fc49.chunk.css.map": "/static/css/main.59e8fc49.chunk.css.map",
+  "static/media/logo.svg": "/static/media/logo.5d5d9eef.svg"
 }
