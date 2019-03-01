@@ -23,14 +23,14 @@ class NavBar extends React.Component {
 
     handleClose = event => {
         console.log( event.currentTarget.textContent );
-        var nextSection = ( event.currentTarget.textContent != '' )?
+        var nextSection = ( event.currentTarget.textContent !== '' )?
             event.currentTarget.textContent : this.state.section;
         this.setState({ anchorEl: null, section: nextSection });
     };
 
     render() {
         const { anchorEl, section } = this.state;
-        var sectionHdr = (section == "Home")? "" : ": " + section;
+        var sectionHdr = (section === "Home")? "" : ": " + section;
 
         return (
             <div>
