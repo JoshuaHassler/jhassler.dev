@@ -1,6 +1,5 @@
 import { createMuiTheme } from '@material-ui/core/styles';
-import pink from '@material-ui/core/colors/pink';
-import blue from '@material-ui/core/colors/blue';
+import { pink, blue } from './pallet';
 
 export default createMuiTheme({
     typography: {
@@ -8,10 +7,10 @@ export default createMuiTheme({
     },
     palette: {
         primary: {
-            main: blue[700]
+            main: blue
         },
         secondary: {
-            main: pink.A400
+            main: pink
         },
         type: 'dark'
     }

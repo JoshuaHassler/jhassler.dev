@@ -9,11 +9,13 @@
     "contentful": "^7.3.0",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
-    "react-scripts": "2.1.5"
+    "react-scripts": "^2.1.8",
+    "react-scroll": "^1.7.11"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && rm -rf docs && mv build docs",
+    "build-deploy": "react-scripts build && rm -rf docs && mv build docs",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

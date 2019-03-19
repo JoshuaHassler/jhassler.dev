@@ -2,17 +2,43 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
-import CardMedia from '@material-ui/core/CardMedia';
+import Button from '@material-ui/core/Button';
+import { Link } from 'react-scroll';
+import { white } from './pallet';
 
 const styles = theme => ({
-    card: {
-        maxWidth: 1000,
-        marginLeft: 'auto',
-        marginRight: 'auto',
+    button: {
+        width: '200px',
     },
-    media: {
-        height: 0,
-        paddingTop: '56.25%', // 16:9
+    card: {
+        height: '100vh',
+        width: '99vw',
+        display: 'flex',
+
+        justifyContent: 'center',
+        alignItems: 'center',
+
+        backgroundImage: 'url("./header.jpg")',
+        backgroundPosition: 'center center',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+        filter: 'blur(5px)',
+    },
+    overlay: {
+        position: 'absolute',
+        backgroundColor: 'rgba(0, 0, 0, 0.4)',
+        border: '2px solid' + white,
+        borderRadius: '25px',
+        color: white,
+        top: '20%',
+        left: '50%',
+        transform: 'translate(-50%, 50%)',
+        zIndex: 2,
+        padding: '10px 40px 40px 40px',
+        textAlign: 'center',
+    },
+    spacer: {
+        top: '100%',
     },
 });
 
@@ -21,13 +47,32 @@ class IndexCard extends React.Component {
         const { classes } = this.props;
 
         return (
-            <Card className={classes.card}>
-                <CardMedia
-                    className={classes.media}
-                    image="https://images.pexels.com/photos/730896/pexels-photo-730896.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
-                    title="Some Code"
-                />
-            </Card>
+            <div className={classes.spacer}>
+                <Card className={classes.card}>
+                </Card>
+                <div
+                    className={classes.overlay}
+                >
+
+                    <h2>Some tagline</h2>
+                    <h1>jhassler.dev</h1>
+                    <Link
+                        to="AboutMe"
+                        spy={true}
+                        smooth={true}
+                        offset={-100}
+                        duration={500}
+                    >
+                        <Button
+                            variant="contained"
+                            color="secondary"
+                            className={classes.button}
+                        >
+                            About Me
+                        </Button>
+                    </Link>
+                </div>
+            </div>
         );
     }
 }

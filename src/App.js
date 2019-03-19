@@ -5,6 +5,7 @@ import theme from './Theme';
 import NavBar from './NavBar';
 import HomeCard from './HomeCard';
 import AboutCard from './AboutCard';
+import Experience from './Experience';
 
 class App extends Component {
     render() {
