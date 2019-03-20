@@ -1,26 +1,44 @@
-import React, { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
 import CssBaseline from '@material-ui/core/CssBaseline';
+import Grid from '@material-ui/core/Grid';
+import { withStyles } from '@material-ui/core/styles';
 import theme from './Theme';
 import NavBar from './NavBar';
 import HomeCard from './HomeCard';
 import AboutCard from './AboutCard';
 import Experience from './Experience';
+import styles from './BaseStyle';
 
-class App extends Component {
-    render() {
-        return (
-            <MuiThemeProvider theme={theme}>
-            <CssBaseline />
-            <div className="App">
-                <NavBar />
-                <HomeCard />
-                <AboutCard />
-                <Experience />
-            </div>
-            </MuiThemeProvider>
-        );
-    }
+function App(props) {
+    const { classes } = props;
+    return (
+        <MuiThemeProvider theme={theme}>
+        <CssBaseline /> 
+
+        <div className="App">
+            <NavBar />
+            <HomeCard />
+            <Grid container className={classes.rootGrid} spacing={16}>
+                <Grid item xs={12}>
+                    <Grid container justify="center" spacing={16}>
+                        <Grid item key="AboutMe">
+                            <AboutCard />
+                        </Grid>
+                        <Grid item key="Experience">
+                            <Experience />
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </div>
+        </MuiThemeProvider>
+    );
 }
 
-export default App;
+App.propTypes = {
+    classes: PropTypes.object.isRequired,
+};
+
+export default withStyles(styles)(App);

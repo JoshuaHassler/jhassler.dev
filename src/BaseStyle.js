@@ -1,7 +1,11 @@
 const styles = {
+    rootGrid: {
+        maxWidth: 1100,
+        margin: 'auto',
+        flexGrow: 1,
+    },
     titleCard: {
-        maxWidth: 1083,
-        marginTop: 20,
+        width: '100%',
         marginLeft: 'auto',
         marginRight: 'auto',
     },
@@ -10,16 +14,6 @@ const styles = {
     },
     content: {
         fontSize: 25,
-    },
-    pos: {
-        marginBottom: 12,
-    },
-    centerContainer: {
-        textAalign: 'center',
-        maxWidth: 1083,
-        marginTop: 20,
-        marginLeft: 'auto',
-        marginRight: 'auto',
     },
 };
 
