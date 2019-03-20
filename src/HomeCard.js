@@ -54,8 +54,8 @@ class IndexCard extends React.Component {
                     className={classes.overlay}
                 >
 
-                    <h2>Some tagline</h2>
-                    <h1>jhassler.dev</h1>
+                    <h2>Software Engineer</h2>
+                    <h1>Joshua Hassler</h1>
                     <Link
                         to="AboutMe"
                         spy={true}

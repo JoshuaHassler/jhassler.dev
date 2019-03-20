@@ -16,6 +16,7 @@ class App extends Component {
                 <NavBar />
                 <HomeCard />
                 <AboutCard />
+                <Experience />
             </div>
             </MuiThemeProvider>
         );

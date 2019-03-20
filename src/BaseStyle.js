@@ -1,6 +1,6 @@
 const styles = {
     titleCard: {
-        maxWidth: 1000,
+        maxWidth: 1083,
         marginTop: 20,
         marginLeft: 'auto',
         marginRight: 'auto',
@@ -13,6 +13,13 @@ const styles = {
     },
     pos: {
         marginBottom: 12,
+    },
+    centerContainer: {
+        textAalign: 'center',
+        maxWidth: 1083,
+        marginTop: 20,
+        marginLeft: 'auto',
+        marginRight: 'auto',
     },
 };
 
