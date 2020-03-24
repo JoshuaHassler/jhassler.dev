@@ -9,6 +9,10 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import TextField from '@material-ui/core/TextField';
 import InputAdornment from '@material-ui/core/InputAdornment';
+import Link from '@material-ui/core/Link';
+import Grow from '@material-ui/core/Grow';
+import VisibilitySensor from 'react-visibility-sensor';
+import { scroller } from 'react-scroll';
 import { Element } from 'react-scroll';
 import ReactCardFlip from 'react-card-flip';
 import styles from './BaseStyle';
@@ -232,20 +236,34 @@ class Experience extends React.Component {
         super(props);
         var options = {
             shouldSort: true,
-            threshold: 0.6,
+            threshold: 0.2,
             location: 0,
             distance: 100,
             maxPatternLength: 32,
             minMatchCharLength: 1,
             keys: [
                 "title",
+                "description",
+                "keywords",
             ]
         };
 
         this.state = {
             experienceCards: ExperienceListings,
             fuse: new Fuse(ExperienceListings, options),
+            inview: false,
         };
+    }
+
+    scrollToElement = el => {
+        this.setState({
+            drawerOpen: false
+        }, scroller.scrollTo( el, {
+            spy: true,
+            smooth: true,
+            offset: -100,
+            duration: 500,
+        }));
     }
 
     handleSearch = (ss) => {
@@ -263,12 +281,13 @@ class Experience extends React.Component {
 
     render() {
         const classes = this.props.classes;
-        console.log( this.state.experienceCards );
         return (
             <div className={classes.expContainer}>
                 <Grid container spacing={16} justify="center">
                     <Grid xs={12} key={-1} item>
+                        <VisibilitySensor onChange={(isVisable) => {this.setState({inview: isVisable | this.state.inview})}}>
                         <Element name="Experience" >
+                            <Grow in={this.state.inview}>
                             <Card className={classes.titleCard}>
                                 <CardContent>
                                     <Typography
@@ -284,14 +303,16 @@ class Experience extends React.Component {
                                         className={classes.content}
                                         color="textPrimary"
                                     >
-                                        This is some HQ experience
+                                        Search around my experience or <Link onClick={ () => this.scrollToElement( "Contact" ) }>contact me</Link> with any questions.
                                     </Typography>
                                     <Search cb={this.handleSearch} />
                                 </CardContent>
                             </Card>
+                            </Grow>
                         </Element>
+                        </VisibilitySensor>
                     </Grid>
-                    <Experiences expCards={this.state.experienceCards} />
+                    <Experiences expCards={this.state.experienceCards} inview={this.state.inview} />
                 </Grid>
             </div>
         );

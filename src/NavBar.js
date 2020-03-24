@@ -71,9 +71,9 @@ class NavBar extends React.Component {
                         <ListItemIcon><NoteIcon/></ListItemIcon>
                         <ListItemText primary="Resume" />
                     </ListItem>
-                    <ListItem button key="Contact Me" onClick={ () => this.scrollToElement( "ContactMe" ) }>
+                    <ListItem button key="Contact" onClick={ () => this.scrollToElement( "Contact" ) }>
                         <ListItemIcon><EmailIcon/></ListItemIcon>
-                        <ListItemText primary="Contact Me" />
+                        <ListItemText primary="Contact" />
                     </ListItem>
                 </List>
             </div>

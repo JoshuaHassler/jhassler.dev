@@ -9,6 +9,8 @@ import NavBar from './NavBar';
 import HomeCard from './HomeCard';
 import AboutCard from './AboutCard';
 import Experience from './Experience';
+import ContactCard from './ContactCard';
+import ResumeCard from './Resume';
 import styles from './BaseStyle';
 
 function App(props) {
@@ -28,6 +30,12 @@ function App(props) {
                         </Grid>
                         <Grid item key="Experience">
                             <Experience />
+                        </Grid>
+                        <Grid item key="Resume">
+                            <ResumeCard />
+                        </Grid>
+                        <Grid item key="Contact">
+                            <ContactCard />
                         </Grid>
                     </Grid>
                 </Grid>

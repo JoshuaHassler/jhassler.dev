@@ -1,3 +1,5 @@
+import { white, pink, blue } from './pallet';
+
 const styles = {
     rootGrid: {
         maxWidth: 1100,
@@ -14,6 +16,20 @@ const styles = {
     },
     content: {
         fontSize: 25,
+    },
+    alignTextWithIcon: {
+        display: 'flex',
+        alignItems: 'center',
+        color: white,
+    },
+    contactLinks: {
+        color: white,
+        '&:hover': {
+            color: pink,
+        }
+    },
+    textContainer: {
+       textAlign: 'center',
     },
 };
 

@@ -12,7 +12,7 @@ const styles = theme => ({
     },
     card: {
         height: '100vh',
-        width: '99vw',
+        width: '100vw',
         display: 'flex',
 
         justifyContent: 'center',
@@ -22,7 +22,7 @@ const styles = theme => ({
         backgroundPosition: 'center center',
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
-        filter: 'blur(5px)',
+        backgroundAttachment: 'fixed',
     },
     overlay: {
         position: 'absolute',
