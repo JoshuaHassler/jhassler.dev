@@ -4,8 +4,6 @@ import { withStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
-import Grow from '@material-ui/core/Grow';
-import VisibilitySensor from 'react-visibility-sensor';
 import { Element } from 'react-scroll';
 import styles from './BaseStyle';
 
@@ -21,9 +19,7 @@ class AboutCard extends React.Component {
     render() {
         const classes = this.props.classes;
         return (
-            <VisibilitySensor onChange={(isVisable) => { this.setState({ inview: isVisable | this.state.inview })}}>
                 <Element name="AboutMe" >
-                    <Grow in={this.state.inview}>
                         <Card className={classes.titleCard}>
                             <CardContent>
                                 <Typography variant="h3" className={classes.title} color="textSecondary" gutterBottom>
@@ -34,9 +30,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor erat nec mi 
                                 </Typography>
                             </CardContent>
                         </Card>
-                    </Grow>
                 </Element>
-            </VisibilitySensor>
         );
     };
 }

@@ -6,8 +6,6 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
-import Grow from '@material-ui/core/Grow';
-import VisibilitySensor from 'react-visibility-sensor';
 import { Element } from 'react-scroll';
 import styles from './BaseStyle';
 
@@ -16,10 +14,6 @@ import EmailIcon from '@material-ui/icons/Email';
 import VpnKeyIcon from '@material-ui/icons/VpnKey';
 
 class ContactCard extends React.Component {
-    state = {
-        inview: false,
-    };
-
     constructor(props) {
         super(props)
     };
@@ -27,9 +21,7 @@ class ContactCard extends React.Component {
     render() {
         const classes = this.props.classes;
         return (
-            <VisibilitySensor onChange={(isVisable) => { this.setState({ inview: isVisable | this.state.inview })}}>
             <Element name="Contact" >
-                <Grow in={this.state.inview}>
                 <Card className={classes.titleCard}>
                     <CardContent>
                         <Grid container spacing={16}>
@@ -61,9 +53,7 @@ class ContactCard extends React.Component {
                         </Grid>
                     </CardContent>
                 </Card>
-                </Grow>
             </Element>
-            </VisibilitySensor>
         );
     }
 }
