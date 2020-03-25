@@ -42,6 +42,7 @@ const itemStyle = theme => ({
     },
     search: {
         width: '100%',
+        paddingRight: 8,
     },
     searchInput: {
         '&$cssFocused': {
@@ -193,6 +194,13 @@ class SearchBar extends React.Component {
         }, this.state.cb( e.target.value ) );
     }
 
+    handleFilterChange( e ) {
+        this.setState({
+            ...this.state,
+            filter: e.target.value
+        })
+    }
+
     render() {
         const classes = this.props.classes;
         return (
@@ -299,7 +307,7 @@ class Experience extends React.Component {
                                         className={classes.content}
                                         color="textPrimary"
                                     >
-                                        Search around my experience or <Link onClick={ () => this.scrollToElement( "Contact" ) }>contact me</Link> with any questions.
+                                        Search around my experience and interests, or get a condensed form in my <Link onClick={ () => this.scrollToElement( "Resume" ) }>resume</Link>
                                     </Typography>
                                     <Search cb={this.handleSearch} />
                                 </CardContent>

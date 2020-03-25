@@ -22,14 +22,7 @@ const styles = {
         alignItems: 'center',
         color: white,
     },
-    contactLinks: {
-        color: white,
-        '&:hover': {
-            color: pink,
-        }
-    },
     textContainer: {
-       textAlign: 'center',
     },
 };
 

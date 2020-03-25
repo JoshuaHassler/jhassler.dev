@@ -6,6 +6,7 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
+import Button from '@material-ui/core/Button';
 import { Element } from 'react-scroll';
 import styles from './BaseStyle';
 
@@ -36,19 +37,34 @@ class ContactCard extends React.Component {
                                 </div>
                             </Grid>
                             <Grid item xs={6}>
-                               <Typography component="p" className={classes.content} color="textPrimary" style={{ textAlign: 'center' }}>
-                                   <span className={classes.alignTextWithIcon, classes.textContainer}><EmailIcon/><Link className={classes.contactLinks} href="mailto:joshua@hassler.dev">joshua@hassler.dev</Link></span>
-                               </Typography>
+                               <Button
+                                   variant="contained"
+                                   color="primary"
+                                   href="mailto:joshua@hassler.dev"
+                               >
+                                   <EmailIcon/>
+                                   joshua@hassler.dev
+                               </Button>
                             </Grid>
                             <Grid item xs={6}>
-                               <Typography component="p" className={classes.content} color="textPrimary" style={{ textAlign: 'center' }}>
-                                   <span className={classes.alignTextWithIcon, classes.textContainer}><VpnKeyIcon/><Link className={classes.contactLinks} href="/jhassler_pgp.asc" download>PGP Key</Link></span>
-                               </Typography>
+                               <Button
+                                   variant="contained"
+                                   color="primary"
+                                   href="jhassler_pgp.asc" download
+                               >
+                                   <VpnKeyIcon/>
+                                   My PGP Public Key
+                               </Button>
                             </Grid>
                             <Grid item xs={6}>
-                               <Typography component="p" className={classes.content} color="textPrimary" style={{ textAlign: 'center' }}>
-                                   <span className={classes.alignTextWithIcon, classes.textContainer}><PhoneIcon/>(774) 313 7029</span>
-                               </Typography>
+                               <Button
+                                   variant="contained"
+                                   color="primary"
+                                   onClick={ () => {alert( "You can't call throught the site right now :)" )}}
+                               >
+                                   <PhoneIcon/>
+                                   (774) 313-7029
+                               </Button>
                             </Grid>
                         </Grid>
                     </CardContent>

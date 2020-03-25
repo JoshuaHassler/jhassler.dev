@@ -4,7 +4,8 @@ import { withStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
-import { Element } from 'react-scroll';
+import Link from '@material-ui/core/Link';
+import { Element, scroller } from 'react-scroll';
 import styles from './BaseStyle';
 
 class AboutCard extends React.Component {
@@ -16,6 +17,17 @@ class AboutCard extends React.Component {
         super(props)
     };
 
+    scrollToElement = el => {
+        this.setState({
+            drawerOpen: false
+        }, scroller.scrollTo( el, {
+            spy: true,
+            smooth: true,
+            offset: -100,
+            duration: 500,
+        }));
+    }
+
     render() {
         const classes = this.props.classes;
         return (
@@ -26,7 +38,7 @@ class AboutCard extends React.Component {
                                     About Me
                                 </Typography>
                                 <Typography component="p" className={classes.content} color="textPrimary">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor erat nec mi dignissim pulvinar. Nullam porta risus quis elit fermentum imperdiet. Etiam nec pretium justo, eu bibendum arcu. Phasellus eleifend diam sed risus dictum blandit. Cras nec eros faucibus, finibus elit vitae, rhoncus augue. Donec aliquet pulvinar tellus, eu ullamcorper augue ultrices ut. Mauris at tortor sed orci egestas maximus sit amet vel lectus. Nulla convallis sit amet nisi sed interdum.
+Hi, I'm Josh! I'm currently a software engineer working at Arista Networks. I work on a compiler as part of the tools team but have a wide variety of experience. Feel free to get to know me better by looking through my <Link onClick={() => this.scrollToElement( "Experience" )}>experience</Link> or by <Link onClick={() => this.scrollToElement( "Contact" )}>contacting me</Link>.
                                 </Typography>
                             </CardContent>
                         </Card>

@@ -11,6 +11,7 @@ import AboutCard from './AboutCard';
 import Experience from './Experience';
 import ContactCard from './ContactCard';
 import ResumeCard from './Resume';
+import Footer from './Footer';
 import styles from './BaseStyle';
 
 function App(props) {
@@ -40,6 +41,7 @@ function App(props) {
                     </Grid>
                 </Grid>
             </Grid>
+            <Footer />
         </div>
         </MuiThemeProvider>
     );

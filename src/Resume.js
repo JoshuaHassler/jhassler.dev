@@ -6,9 +6,9 @@ import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
 import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
+import { Link } from 'react-scroll';
 import { Element } from 'react-scroll';
 
 const styles = theme => ({
@@ -26,6 +26,9 @@ const styles = theme => ({
    },
    content: {
       flex: '1 0 auto',
+      backgroundImage: "url(Resume2020_blured-1.png)",
+      backgroundSize: 'cover',
+      backgroundAttachment: 'fixed',
    },
    container: {
       textAlign: 'center',
@@ -55,22 +58,17 @@ class ResumeCard extends React.Component {
       return(
          <Element name="Resume" >
             <Card className={classes.cardRoot}>
-               <CardMedia
-                  className={classes.resImage}
-                  image="Resume2020-1.png"
-                  title="My Resume"
-               />
                <div className={classes.info}>
                <CardContent className={classes.content}>
                   <Grid container spacing={16}>
                      <Grid item xs={12}>
-                        <Typography variant="h3" className={classes.title} color="textSecondary" gutterBottom>
+                        <Typography variant="h3" className={classes.title} color="primary" gutterBottom>
                            Resume
                         </Typography>
                      </Grid>
                      <Grid item xs={12}>
                         <div className={classes.container}>
-                           <Typography component="p" className={classes.textContent} color="textPrimary">
+                           <Typography component="p" className={classes.textContent} color="primary">
                               You can
                            </Typography>
                         </div>
@@ -88,7 +86,7 @@ class ResumeCard extends React.Component {
                      </Grid>
                      <Grid item xs={4}>
                         <div className={classes.container}>
-                           <Typography component="p" className={classes.textContent} color="textPrimary">
+                           <Typography component="p" className={classes.textContent} color="primary">
                               or
                            </Typography>
                         </div>
@@ -102,12 +100,20 @@ class ResumeCard extends React.Component {
                      </Grid>
                      <Grid item xs={12}>
                         <div className={classes.container}>
-                           <Typography component="p" className={classes.textContent} color="textPrimary">
+                           <Typography component="p" className={classes.textContent} color="primary">
                               my resume. Have any questions?
                            </Typography>
+                           <Link
+                               to="Contact"
+                               spy={true}
+                               smooth={true}
+                               offset={-100}
+                               duration={500}
+                           >
                            <Button variant="contained" color="secondary" href="#contained-buttons">
                               contact me
                            </Button>
+                           </Link>
                         </div>
                      </Grid>
                   </Grid>
