@@ -42,7 +42,6 @@ const itemStyle = theme => ({
     },
     search: {
         width: '100%',
-        paddingRight: 8,
     },
     searchInput: {
         '&$cssFocused': {
@@ -194,13 +193,6 @@ class SearchBar extends React.Component {
         }, this.state.cb( e.target.value ) );
     }
 
-    handleFilterChange( e ) {
-        this.setState({
-            ...this.state,
-            filter: e.target.value
-        })
-    }
-
     render() {
         const classes = this.props.classes;
         return (
@@ -249,7 +241,6 @@ class Experience extends React.Component {
             minMatchCharLength: 1,
             keys: [
                 "title",
-                "description",
                 "keywords",
             ]
         };
@@ -257,7 +248,6 @@ class Experience extends React.Component {
         this.state = {
             experienceCards: ExperienceListings,
             fuse: new Fuse(ExperienceListings, options),
-            inview: false,
         };
     }
 
@@ -314,7 +304,7 @@ class Experience extends React.Component {
                             </Card>
                         </Element>
                     </Grid>
-                    <Experiences expCards={this.state.experienceCards} inview={this.state.inview} />
+                    <Experiences expCards={this.state.experienceCards}/>
                 </Grid>
             </div>
         );

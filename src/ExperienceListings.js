@@ -2,16 +2,16 @@ const ExperienceListings = [
     {
         id: 0,
         title: "UMass Lowell",
-        description: "Student. Achieved Bachelor of Science in Computer Science. Studied a wide variety of topics with extra focus on compilers, language design, operating systems, and distributed systems.",
+        description: "Student. Achieved Bachelor of Science in Computer Science. Studied a wide variety of topics with extra focus on compilers, language design, operating systems, and distributed systems. Worked with C, C++, Python, Rust",
         image: "uml.png",
-        keywords: ["education", "school", "umass lowell", "uml", "university", "college", "university", "umass", "degree"],
+        keywords: ["education", "school", "umass lowell", "uml", "university", "college", "university", "umass", "degree", "C", "C++", "Python", "Rust" ],
     },
     {
         id: 1,
         title: "Arista Networks",
-        description: "Software Engineer. Works as a compiler engineer to improve language usability. Optimized compiler parsing to reduce build times. Designed and implemented caching solutions powered by Redis increasing cache hit rate from 20% to 80%. Worked with c, c++, python, Redis, and boost.",
+        description: "Software Engineer. Works as a compiler engineer to improve language usability. Optimized compiler parsing to reduce build times. Designed and implemented caching solutions powered by Redis increasing cache hit rate from 20% to 80%. Worked with C, C++, python, Redis, and boost.",
         image: "testimg.jpg",
-        keywords: [ "compilers", "language", "redis", "anet", "c++", "c", "boost", "python", "work" ],
+        keywords: [ "compilers", "language", "redis", "anet", "C++", "C", "boost", "python", "work", "software", "engineer"]
     },
     {
         id: 2,
@@ -23,16 +23,16 @@ const ExperienceListings = [
     {
         id: 3,
         title: "SPACE HAUC",
-        description: "Lead Developer. Team awarded $200,000 grant under NASA's USIP program to develop a CubeSat to test phased array technology. Devised a multi-process communication model to allow for high data concurrency. Programmed publisher-subscriber system to enable hot-swappable plugin-based architecture. Designed schemas for storing collected flight metrics. Worked with c, c++, System V APIs, SQL.",
+        description: "Lead Developer. Team awarded $200,000 grant under NASA's USIP program to develop a CubeSat to test phased array technology. Devised a multi-process communication model to allow for high data concurrency. Programmed publisher-subscriber system to enable hot-swappable plugin-based architecture. Designed schemas for storing collected flight metrics. Worked with C, C++, System V APIs, SQL.",
         image: "spacehauc.JPG",
-        keywords: [ "space", "satellite", "cubesat", "operating", "system", "mpc", "multi", "process", "communication", "work", "c", "c++", "system", "v", "5", "SQL" ],
+        keywords: [ "space", "satellite", "cubesat", "operating", "system", "mpc", "multi", "process", "communication", "work", "C", "C++", "system", "v", "5", "SQL", "software", "engineer" ],
     },
     {
         id: 4,
         title: "91.5 WUML",
         description: "Webmaster, Disk Jockey. Maintained and supported legacy website. Increased traffic by 20% through search engine optimization. Addressed SQL injection security vulnerabilities in legacy code. Trained as DJ to fulfill FCC requirements. Decided programming for and ran a weekly show. Worked with PHP, HTML, JavaScript, SQL, music :)",
         image: "wuml.png",
-        keywords: [ "dj", "leadership", "music", "hobbie", "seo", "php", "html", "javascript", "sql" ],
+        keywords: [ "dj", "leadership", "music", "hobby", "seo", "php", "html", "javascript", "sql" ],
     },
     {
         id: 5,
@@ -44,12 +44,12 @@ const ExperienceListings = [
     {
         id: 6,
         title: "Home Networking",
-        description: "Personal hobbie. Like to develop and experiment with the capabilities of home networking devices. This has led to experience configuring and maintaing authoritative DNS servers and caching, vLANs, RADIUS servers, wpa2 enterprise networks, OpenVPN servers and clients, ACLs, and custom firewall configuration.",
+        description: "Personal hobby. Like to develop and experiment with the capabilities of home networking devices. This has led to experience configuring and maintaing authoritative DNS servers and caching, vLANs, RADIUS servers, WPA2 enterprise networks, OpenVPN servers and clients, ACLs, and custom firewall configuration.",
         image: "hl.jpg",
-        keywords: [ "hobbie", "vlan", "dns", "access", "control", "list", "openvpn", "networking", "home" ],
+        keywords: [ "hobby", "vlan", "dns", "access", "control", "list", "openvpn", "networking", "home" ],
     },
     {
-        id: 6,
+        id: 7,
         title: "jhassler.dev",
         description: "This site. This site is a constant work in progress as I attempt to develop my full-stack web skills. In this iteration, it is a react based app with minimal backend so it can be hosted as a static site on Github pages. Some parts are taken from tutorials, some are purely created by myself. This is a playground for new ideas when I feel like experimenting or learning.",
         image: "meta.png",
